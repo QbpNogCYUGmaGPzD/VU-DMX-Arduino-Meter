@@ -1,3 +1,11 @@
+/* Simple VU meter with DMX LED par
+ /
+ / dennisneumann@galmoer.nl
+ /
+ /
+ /
+ */
+
 #include <DmxMaster.h>
 
 const int sampleWindow = 50; // Sample window width in mS (50 mS = 20Hz)
@@ -44,7 +52,7 @@ void loop()
 inten = mapfloat(volts, 0.0, 3.3, 0.0, 255.0);
 
 //Serial.println(volts);
-Serial.println(inten);
+//Serial.println(inten);
 
   if (inten < 20) { //Laagste stand
     DmxMaster.write(26,inten);
