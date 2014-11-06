@@ -55,14 +55,14 @@ inten = mapfloat(volts, 0.0, 3.3, 0.0, 255.0);
 //Serial.println(inten);
 
   if (inten < 20) { //Laagste stand
-    DmxMaster.write(26,inten);
+    DmxMaster.write(26,inten/2);
     DmxMaster.write(20,0);
     DmxMaster.write(14,0);
     DmxMaster.write(8,0);
     DmxMaster.write(7,0);
     DmxMaster.write(1,0);
   } 
-  else if (inten < 40) {
+  else if (inten < 60) {
     DmxMaster.write(26,inten);
     DmxMaster.write(20,inten);
     DmxMaster.write(14,inten/3);
@@ -70,7 +70,7 @@ inten = mapfloat(volts, 0.0, 3.3, 0.0, 255.0);
     DmxMaster.write(7,0);
     DmxMaster.write(1,0);
   } 
-  else if (inten < 80) {
+  else if (inten < 100) {
     DmxMaster.write(26,inten);
     DmxMaster.write(20,inten);
     DmxMaster.write(14,inten);
@@ -78,7 +78,7 @@ inten = mapfloat(volts, 0.0, 3.3, 0.0, 255.0);
     DmxMaster.write(7,inten/2);
     DmxMaster.write(1,0);
   } 
-  else if (inten < 120) {
+  else if (inten < 140) {
     DmxMaster.write(26,inten);
     DmxMaster.write(20,inten);
     DmxMaster.write(14,inten);
@@ -86,7 +86,7 @@ inten = mapfloat(volts, 0.0, 3.3, 0.0, 255.0);
     DmxMaster.write(7,inten/2);
     DmxMaster.write(1,inten/2);
   } 
-  else if (inten < 160) { //hoogste stand
+  else if (inten < 180) { //hoogste stand
     DmxMaster.write(26,inten);
     DmxMaster.write(20,inten);
     DmxMaster.write(14,inten);
