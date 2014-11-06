@@ -65,7 +65,7 @@ inten = mapfloat(volts, 0.0, 3.3, 0.0, 255.0);
   else if (inten < 40) {
     DmxMaster.write(26,inten);
     DmxMaster.write(20,inten);
-    DmxMaster.write(14,inten/2);
+    DmxMaster.write(14,inten/3);
     DmxMaster.write(8,0);
     DmxMaster.write(7,0);
     DmxMaster.write(1,0);
@@ -74,7 +74,7 @@ inten = mapfloat(volts, 0.0, 3.3, 0.0, 255.0);
     DmxMaster.write(26,inten);
     DmxMaster.write(20,inten);
     DmxMaster.write(14,inten);
-    DmxMaster.write(8,inten);
+    DmxMaster.write(8,inten/3);
     DmxMaster.write(7,inten/2);
     DmxMaster.write(1,0);
   } 
@@ -82,8 +82,8 @@ inten = mapfloat(volts, 0.0, 3.3, 0.0, 255.0);
     DmxMaster.write(26,inten);
     DmxMaster.write(20,inten);
     DmxMaster.write(14,inten);
-    DmxMaster.write(8,inten);
-    DmxMaster.write(7,inten);
+    DmxMaster.write(8,inten/3);
+    DmxMaster.write(7,inten/2);
     DmxMaster.write(1,inten/2);
   } 
   else if (inten < 160) { //hoogste stand
